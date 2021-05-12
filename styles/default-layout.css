@@ -1,0 +1,51 @@
+
+
+
+/*Rows and columns*/
+.column-2{
+    float:left;
+    width:50%;
+}
+.column-3{
+    float:left;
+    width:33.333%;
+}
+.column-4{
+    float:left;
+    width:25%;
+}
+.column-5{
+    float:left;
+    width:20%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:600px){
+    .column-2{
+        width:100%;
+    }
+    .column-3{
+        width:100%;
+    }
+    .column-4{
+        width:100%;
+    }
+    .column-5{
+        width:100%;
+    }
+}
+/*Characteristics to be applied to rows or columns*/
+.tall{
+    height:50%;
+}
+.short{
+    height:20%;
+}
+
+
+.footer{
+
+}
