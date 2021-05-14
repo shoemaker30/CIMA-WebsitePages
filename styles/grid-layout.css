@@ -1,0 +1,362 @@
+/* CSS grid template for cimapp.org by Eric Shoemaker (github: shoemaker30).
+
+Each row should be trated as one section/divider, and custom columns can be added
+
+How to use this grid:
+    <div class="row theme"> 
+        <div class="column width height theme">
+*/
+
+
+body{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,p,a{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+.column{
+    float:left;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*COLUMN WIDTHS*/
+    .full{
+        width: 100%;
+    }
+    .single{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+    .half{
+        width: 46.25%;
+        margin-left: 2.5%;
+    }
+    .third{
+        width: 30%;
+        margin-left: 2.5%;
+    }
+    .two-third{
+        width: 62.5%;
+        margin-left: 2.5%;
+    }
+    .fourth{
+        width: 21.875%;
+        margin-left: 2.5%;
+    }
+    @media screen and (max-width:600px){
+        .single,.half,.third{
+            width:100%;
+            margin-left: 0;
+        }
+        .fourth{
+            width:46.25%;
+        }
+    }
+
+    
+
+/*COLUMN HEIGHTS*/
+    .xshort{
+        height: 5%;
+    }
+    .short{
+        height: 15%;
+    }
+    .mid{
+        height: 30%;
+    }
+    .tall{
+        height: 45%;
+    }
+    .xtall{
+        height: 60%;
+    }
+    @media screen and (max-width:600px){
+        .xshort{
+            height:4%;
+        }
+        .short{
+            height:8%;
+        }
+        .mid{
+            height: 25%;
+        }
+    }
+
+/*COLUMN THEMES*/
+
+    .step{
+        background-image: url("../media/paper-texture.jpg");
+        margin-top: 3%;
+        margin-bottom: 3%;
+        filter: drop-shadow(4px 4px 4px gray);
+        color: black;
+    }
+        .step h1{
+            text-align: left;
+            margin-left: 5%;
+            font-size: 50px;
+            float:left;
+            font-family: cursive;
+        }
+        .step h2{
+            font-size: 30px;
+        }
+        .step img{
+            width: 70%;
+            
+        }
+        .step img:hover{
+            width: 71%;
+            filter: drop-shadow(5px 5px 5px grey);
+        }
+        .step p{
+            text-align: left;
+            margin-left: 5%;
+            font-size: 20px;
+        }
+        @media screen and (max-width:600px){
+            .step{
+                background-image: none;
+                filter: drop-shadow(0);
+                height: auto;
+            }
+            .step h1{
+                font-size: 0px;
+                margin-left: 0;
+                float: none;
+            }
+            .step h2{
+                font-size: 0px;
+            }
+            .step p{
+                font-size: 0px;
+            }
+            .step img{
+                width: 70%;
+            }
+        }
+        /*header in front of parallax row theme*/
+    .main-header h1{
+        font-size: 60px;
+        padding-top: 20%;
+    }    
+    
+    .section-header{
+        margin-bottom: 2%;
+    }
+        .section-header h1{
+            font-size: 60px;
+            margin:0;
+            margin-top: 1%;
+            margin-bottom: 3%;
+        }
+        .section-header p{
+            font-size: 20px;
+            margin: 0;
+        }
+        .section-header a{
+            font-size: 20px;
+            margin: 0;
+            text-decoration: none;
+        }
+        @media screen and (max-width:600px){
+            .section-header h1{
+                font-size: 30px;
+            }
+            .section-header p{
+                font-size: 15px;
+            }
+            .section-header a{
+                font-size: 15px;
+            }
+        }
+        
+
+    .sub-header{
+        text-align: left;
+    }
+        .sub-header h1{
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: 30px;
+        }
+        @media screen and (max-width:600px){
+            .sub-header h1{
+                font-size: 20px;
+            }
+    }
+
+    .basic-textbox{
+        text-align: left;
+    }
+        .basic-textbox p{
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: 15px;
+        }
+        @media screen and (max-width:600px){
+            .basic-textbox p{
+                font-size: 12px;
+            }
+        }
+
+    .footer{
+        text-align: left;
+    }
+        .footer h2{
+            margin-left: 0;
+            font-size: 18px;
+        }
+        .footer h3{
+            margin:0;
+            font-size: 15px;
+        }
+        .footer h4{
+            margin-left: 0;
+            font-size: 14px;
+        }
+        .footer a{
+            margin-left: 0;
+            font-size: 15px;
+            text-decoration: none;
+            color: lightgray;
+        }
+        .footer p{
+            margin-left: 0;
+            font-size: 15px;
+            text-decoration: none;
+            color: lightgray;
+        }
+        .footer a:hover{
+            color: white;
+        }
+        @media screen and (max-width:600px){
+            .footer a{
+                font-size: 12px;
+            }
+            .footer h3{
+                font-size: 12px;
+            }
+            .footer h4{
+                font-size: 12px;
+            }
+        }
+        
+
+/*ROW BACKGROUND COLORS*/
+    .darkblue{
+        background-color: #02353C;
+        color: white;
+    }
+        .darkblue a{
+            color:lightgray;
+        }
+        .darkblue a:hover{
+            color:white;
+        }
+    .lightblue{
+        background-color: #C1F6ED;
+    }
+    .blue{
+        background-color: #3FD0C9;
+        color: white;
+    }
+        .blue a{
+            color:lightgray;
+        }
+        .blue a:hover{
+            color:white;
+        }
+    .green{
+        background-color: #449342;
+        color: white;
+    }
+        .green a{
+            color:lightgray;
+        }
+        .green a:hover{
+            color:white;
+        }
+    .seagreen{
+        background-color: #2EAF7D;
+        color: white;
+    }
+        .seagreen a{
+            color:lightgray;
+        }
+        .seagreen a:hover{
+            color:white;
+        }
+    .black{
+        background-color: black;
+        color: white;
+    }
+        .black a{
+            color:lightgray;
+        }
+        .black a:hover{
+            color:white;
+        }
+    .darkgrey{
+        background-color: #131314;
+        color: white;
+    }
+        .darkgrey a{
+            color:lightgray;
+        }
+        .darkgrey a:hover{
+            color:white;
+        }
+    .darkslategrey{
+        background-color: darkslategrey;
+        color: white;
+    }
+        .darkslategrey a{
+            color:lightgray;
+        }
+        .darkslategrey a:hover{
+            color:white;
+        }
+    .parallax-river-walk{
+        background-image: url("../media/greenville-river-walk.jpg");
+        height: 50%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+    }
+    .parallax-pothole{
+        background-image: url("../media/pothole.jpg");
+        height: 40%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+
+/*add hide-on-mobile class to anything that shouldnt appear on the mobile site.*/
+@media screen and (max-width:600px){
+    .hide-on-mobile{
+        display: none;
+    }
+}
+ 
+
+
