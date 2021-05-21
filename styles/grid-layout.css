@@ -13,11 +13,10 @@ body{
     justify-items: center;
     align-items: center;
     text-align: center;
-    font-family: sans-serif;
     margin: 0;
     padding: 0;
 }
-h1,h2,h3,h4,p,a{
+h1,h2,h3,h4,p{
     margin-left: 2.5%;
     margin-right: 2.5%;
 }
@@ -27,10 +26,19 @@ h1,h2,h3,h4,p,a{
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
+    @media screen and (max-width:600px){
+        .column{
+            margin-top: 4%;
+        }
+    }
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.column img{
+    width: 70%;
 }
 
 /*COLUMN WIDTHS*/
@@ -99,57 +107,6 @@ h1,h2,h3,h4,p,a{
 
 /*COLUMN THEMES*/
 
-    .step{
-        background-image: url("../media/paper-texture.jpg");
-        margin-top: 3%;
-        margin-bottom: 3%;
-        filter: drop-shadow(4px 4px 4px gray);
-        color: black;
-    }
-        .step h1{
-            text-align: left;
-            margin-left: 5%;
-            font-size: 50px;
-            float:left;
-            font-family: cursive;
-        }
-        .step h2{
-            font-size: 30px;
-        }
-        .step img{
-            width: 70%;
-            
-        }
-        .step img:hover{
-            width: 71%;
-            filter: drop-shadow(5px 5px 5px grey);
-        }
-        .step p{
-            text-align: left;
-            margin-left: 5%;
-            font-size: 20px;
-        }
-        @media screen and (max-width:600px){
-            .step{
-                background-image: none;
-                filter: drop-shadow(0);
-                height: auto;
-            }
-            .step h1{
-                font-size: 0px;
-                margin-left: 0;
-                float: none;
-            }
-            .step h2{
-                font-size: 0px;
-            }
-            .step p{
-                font-size: 0px;
-            }
-            .step img{
-                width: 70%;
-            }
-        }
         /*header in front of parallax row theme*/
     .main-header h1{
         font-size: 60px;
@@ -219,25 +176,20 @@ h1,h2,h3,h4,p,a{
         text-align: left;
     }
         .footer h2{
-            margin-left: 0;
             font-size: 18px;
         }
         .footer h3{
-            margin:0;
             font-size: 15px;
         }
         .footer h4{
-            margin-left: 0;
             font-size: 14px;
         }
         .footer a{
-            margin-left: 0;
             font-size: 15px;
             text-decoration: none;
             color: lightgray;
         }
         .footer p{
-            margin-left: 0;
             font-size: 15px;
             text-decoration: none;
             color: lightgray;
@@ -282,6 +234,7 @@ h1,h2,h3,h4,p,a{
         .blue a:hover{
             color:white;
         }
+        
     .green{
         background-color: #449342;
         color: white;
@@ -351,12 +304,20 @@ h1,h2,h3,h4,p,a{
     }
     
 
-/*add hide-on-mobile class to anything that shouldnt appear on the mobile site.*/
+/*add desktop-only class to anything that shouldnt appear on the mobile site. and vice versa*/
+.mobile-only{
+    display: none;
+}
 @media screen and (max-width:600px){
-    .hide-on-mobile{
+    .desktop-only{
         display: none;
     }
+    .mobile-only{
+        display: block;
+    }
 }
+
+
  
 
 
