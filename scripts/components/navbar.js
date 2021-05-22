@@ -1,36 +1,57 @@
+//Credit to w3schools for this navbar design
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown
 
 document.write(
-        '<nav class="navigation">'
-    +       '<div class="nav-logo">Your Logo</div>'
-    +       '<ul class="nav-menu">'
-    +           '<li>'
-    +                   '<a href="#">Services</a>'
- 
-    +           '</li>'
-    +           '<li><a href="">Info</a></li>'
-    +           '<li><a href="">Contact</a></li>'
-    +       '</ul>'
-    +       '<div class="nav-toggle">'
-    +           '<span class="icon-bar"></span>'
-    +           '<span class="icon-bar"></span>'
-    +           '<span class="icon-bar"></span>'
-    +       '</div>'
-    +   '</nav>'
-    +   '<div class="nav-overlay"></div>'
+    '<div class="topnav" id="myTopnav">'
++       '<a href="index.html" class="active">CIMA</a>'
++       '<div class="dropdown">'
++           '<button class="dropbtn">Services '
++               '<i class="fa fa-caret-down"></i>'
++           '</button>'
++           '<div class="dropdown-content">'
++               '<a href="#">In-Browser Reporting</a>'
++               '<a href="#">Mobile App</a>'
++               '<a href="#">View Nearby Hazards</a>'
++               '<a href="#">Cima for Municipalities</a>'
++               '<a href="#">API and Integrations</a>'
++           '</div>'
++       '</div> '
++       '<div class="dropdown">'
++           '<button class="dropbtn">Info '
++               '<i class="fa fa-caret-down"></i>'
++           '</button>'
++           '<div class="dropdown-content">'
++               '<a href="#">About Us</a>'
++               '<a href="#">FAQ</a>'
++           '</div>'
++       '</div> '
++       '<div class="dropdown">'
++           '<button class="dropbtn">Contact '
++               '<i class="fa fa-caret-down"></i>'
++           '</button>'
++           '<div class="dropdown-content">'
++               '<a href="#">Site Messaging</a>'
++               '<a href="#">Contact Info</a>'
++           '</div>'
++       '</div> '
++       '<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNavbar()">&#9776;</a>'
++    '</div>'
++    '<div id="myOverlay" class="nav-overlay"></div>'
 );
 
-//menu toggle
-(function($){
-    $('.nav-toggle').click(function(e){
-        e.preventDefault();
-        $('.nav-toggle').toggleClass('active');
-        $('.nav-menu').toggleClass('active');
-        $('.nav-overlay').toggleClass('active');
-    })
-    $('.nav-overlay').click(function(e){
-        e.preventDefault();
-        $('.nav-toggle').toggleClass('active');
-        $('.nav-menu').toggleClass('active');
-        $('.nav-overlay').toggleClass('active');
-    })
-})(jQuery);
+
+function toggleNavbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+    x = document.getElementById("myOverlay");
+    if (x.className === "nav-overlay") {
+        x.className += " active";
+    } else {
+        x.className = "nav-overlay";
+    }
+}
+

@@ -15,6 +15,7 @@ body{
     text-align: center;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 h1,h2,h3,h4,p{
     margin-left: 2.5%;
@@ -236,7 +237,7 @@ h1,h2,h3,h4,p{
         }
         
     .green{
-        background-color: #449342;
+        background-color: green;
         color: white;
     }
         .green a{
@@ -266,7 +267,7 @@ h1,h2,h3,h4,p{
             color:white;
         }
     .darkgrey{
-        background-color: #131314;
+        background-color: #333;
         color: white;
     }
         .darkgrey a{
@@ -285,23 +286,7 @@ h1,h2,h3,h4,p{
         .darkslategrey a:hover{
             color:white;
         }
-    .parallax-river-walk{
-        background-image: url("../media/greenville-river-walk.jpg");
-        height: 50%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: white;
-    }
-    .parallax-pothole{
-        background-image: url("../media/pothole.jpg");
-        height: 40%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    
     
 
 /*add desktop-only class to anything that shouldnt appear on the mobile site. and vice versa*/

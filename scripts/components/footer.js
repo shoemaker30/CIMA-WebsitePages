@@ -10,7 +10,7 @@ document.write(
     +    '</div>' 
     +    '<div class="column fourth footer">' 
     +        '<h2>-</h2>' 
-    +        '<p><a href="./faq.html">FAQ</a></p>'
+    +        '<p><a href="info/faq.html">FAQ</a></p>'
     +        '<p><a href="./contact.html">Contact Us</a></p>'
     +        '<p><a href="./about">About Cima</a></p>'
     +        '<p><a href="./webapp">Cima for Cities</a></p>'
