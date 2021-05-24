@@ -1,0 +1,55 @@
+.parallax-sidebar{
+    background-image: url("../../media/sidebar.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+}
+.form-area{
+	background-color: white;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 50%;
+	min-width: 50%;
+	margin: auto;
+	margin-top: 0%;
+	border-right: #3f3f3f 3% solid;
+	border-left: #3f3f3f 3% solid;
+	box-shadow: -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+	min-height: 700px;
+	height: 100%;
+}
+@media (max-device-width: 600px){
+    .form-area{
+        width:100%;
+    }
+}
+.question-area{
+    width: 80%;
+    margin-left:10%;
+}
+@media (max-device-width: 600px){
+    .question-area{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+
+.question{
+    text-align: left;
+}
+    .question h1{
+
+        font-size: 15px;
+    }
+    .question button{
+        
+    }
+
+.selected{
+
+}

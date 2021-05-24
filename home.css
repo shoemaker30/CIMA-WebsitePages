@@ -1,5 +1,5 @@
 .parallax-river-walk{
-    background-image: url("../media/greenville-river-walk.jpg");
+    background-image: url("./media/greenville-river-walk.jpg");
     height: 50%;
     background-attachment: fixed;
     background-position: center;
@@ -8,7 +8,7 @@
     color: white;
 }
 .parallax-pothole{
-    background-image: url("../media/pothole.jpg");
+    background-image: url("./media/pothole.jpg");
     height: 40%;
     background-attachment: fixed;
     background-position: center;

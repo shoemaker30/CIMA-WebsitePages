@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>New Report</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+        
+        <link rel="stylesheet" href="../../page-defaults/navbar.css">
+        <link rel="stylesheet" href="../../page-defaults/grid-layout.css">
+        <link rel="stylesheet" href="./report.css">
+
+    </head>
+    <body>
+        <script language="javascript" type="text/javascript" src="../../page-defaults/navbar.js"></script>
+        <div class="parallax-sidebar">
+            <form class="form-area">
+                <!--space from top-->
+                <div class="row">
+                    <div class="column xshort"></div>
+                </div>
+
+                <input type="range" id="safety_issue" style="display:none;">
+                <input type="text" id="latitude" style="display:none;">
+                <input type="text" id="longitude" style="display:none;">
+                <input type="text" id="object_type" style="display:none;">
+                <input type="text" id="primary_issue" style="display:none;">
+                <input type="text" id="secondary_issues" style="display:none;">
+                
+
+
+                <div class="question-area">
+                    <div class="row">
+                        <div class="column single">
+                            <h1>Infrastructure Damage Report</h1>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+    
+                        <div class="column single question">
+                            <h1>Does this issue present a risk to public safety?</h1>
+                            <button onclick="answerSafetyIssue(1)">Yes</button>
+                            <button onclick="answerSafetyIssue(0)">No</button>
+                        </div>
+                        
+    
+                    </div>
+                </div>
+                
+
+            </form> 
+            
+
+
+        </div>
+
+    </body>
+</html>

@@ -89,7 +89,7 @@ h1,h2,h3,h4,p{
         height: 30%;
     }
     .tall{
-        height: 45%;
+        height: 50%;
     }
     .xtall{
         height: 60%;
@@ -109,9 +109,13 @@ h1,h2,h3,h4,p{
 /*COLUMN THEMES*/
 
         /*header in front of parallax row theme*/
+    .main-header{
+        height: 100%;
+    }
     .main-header h1{
         font-size: 60px;
         padding-top: 20%;
+       
     }    
     
     .section-header{
@@ -287,6 +291,10 @@ h1,h2,h3,h4,p{
             color:white;
         }
     
+    .green-transparent{
+        background-color: rgba(0,100,0,0.7);
+    }
+    
     
 
 /*add desktop-only class to anything that shouldnt appear on the mobile site. and vice versa*/
@@ -301,6 +309,10 @@ h1,h2,h3,h4,p{
         display: block;
     }
 }
+
+
+
+
 
 
  
