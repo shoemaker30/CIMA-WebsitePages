@@ -1,0 +1,11 @@
+.search-results{
+    text-align: left;
+}
+    .search-results p{
+        font-size: 15px;
+        margin-left: 10%;
+    }
+    .search-results h1{
+        font-size: 15px;
+        margin-left: 10%;
+    }

@@ -147,7 +147,38 @@ h1,h2,h3,h4,p{
                 font-size: 15px;
             }
         }
-        
+
+    .page-header{
+        margin-bottom: 2%;
+    }
+        .page-header h1{
+            font-size: 60px;
+            margin:0;
+            margin-top: 6%;
+            margin-bottom: 1%;
+        }
+        .page-header p{
+            font-size: 20px;
+            margin: 0;
+        }
+        .page-header a{
+            font-size: 20px;
+            margin: 0;
+            text-decoration: none;
+        }
+        @media screen and (max-width:600px){
+            .page-header h1{
+                font-size: 30px;
+                margin-top: 12%;
+            }
+            .page-header p{
+                font-size: 15px;
+            }
+            .page-header a{
+                font-size: 15px;
+            }
+        }
+    
 
     .sub-header{
         text-align: left;

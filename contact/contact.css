@@ -1,0 +1,11 @@
+.about{
+    text-align: left;
+    margin: 1%;
+}
+.about h1{
+    font-size: 30px;
+}
+
+.underline{
+    border-bottom: 1px solid;
+}

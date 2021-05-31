@@ -3,7 +3,7 @@
 
 document.write(
     '<div class="topnav" id="myTopnav">'
-+       '<a href="index.html" class="active">CIMA</a>'
++       '<a href="#" class="active">CIMA</a>'
 +       '<div class="dropdown">'
 +           '<button class="dropbtn">Services '
 +               '<i class="fa fa-caret-down"></i>'

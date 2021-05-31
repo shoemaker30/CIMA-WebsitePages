@@ -1,10 +1,11 @@
-[
+//A JSON Layout for the structure of the survey
+var tree = 
     {   
         "title":"CIMA Decision Tree",
         "version":2.0,
-        "last-edited":"5/22/2021",
+        "last-edited":"5/30/2021",
         "authors":["Harrison Randolph, Eric Shoemaker"],
-        "survey_structure":
+        "survey":
         [
             {
                 "object_type":"Sign/Signal",
@@ -442,4 +443,4 @@
             }
         ]
     }
-]
+

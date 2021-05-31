@@ -2,7 +2,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .topnav {
-  background-color:rgba(0,0,0,0.5);
+  background-color:#333;
 
     z-index: 2;
     position: fixed;

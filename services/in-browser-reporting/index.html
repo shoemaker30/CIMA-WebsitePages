@@ -5,54 +5,82 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
         
+        <script src="https://kit.fontawesome.com/d81ae76bde.js" crossorigin="anonymous"></script>
+        
         <link rel="stylesheet" href="../../page-defaults/navbar.css">
         <link rel="stylesheet" href="../../page-defaults/grid-layout.css">
         <link rel="stylesheet" href="./report.css">
 
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity= "sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" /> 
     </head>
     <body>
         <script language="javascript" type="text/javascript" src="../../page-defaults/navbar.js"></script>
-        <div class="parallax-sidebar">
-            <form class="form-area">
-                <!--space from top-->
-                <div class="row">
-                    <div class="column xshort"></div>
-                </div>
-
-                <input type="range" id="safety_issue" style="display:none;">
-                <input type="text" id="latitude" style="display:none;">
-                <input type="text" id="longitude" style="display:none;">
-                <input type="text" id="object_type" style="display:none;">
-                <input type="text" id="primary_issue" style="display:none;">
-                <input type="text" id="secondary_issues" style="display:none;">
-                
-
-
-                <div class="question-area">
-                    <div class="row">
-                        <div class="column single">
-                            <h1>Infrastructure Damage Report</h1>
-                        </div>
-                    </div>
-    
-                    <div class="row">
-    
-                        <div class="column single question">
-                            <h1>Does this issue present a risk to public safety?</h1>
-                            <button onclick="answerSafetyIssue(1)">Yes</button>
-                            <button onclick="answerSafetyIssue(0)">No</button>
-                        </div>
-                        
-    
-                    </div>
-                </div>
-                
-
-            </form> 
-            
-
-
+        <div class="row darkblue">
+            <div class="column single page-header">
+                <h1>Infrastructure Damage Report</h1>
+            </div>
         </div>
 
+        <form>
+            <div id="map-question">
+                <div class="row">
+                    <div class="column half">
+                        <p>Where did this occur?</p>
+                        <p id="error-message">Location data is disabled. Please <a href="https://docs.buddypunch.com/en/articles/919258-how-to-enable-location-services-for-chrome-safari-edge-and-android-ios-devices-gps-setting" target="_blank" rel="noopener noreferrer">enable</a> and refresh the page to continue.</p>
+                        
+                    </div>
+                    <div class="column half tall" id="map">
+                    </div>
+                </div>
+                <div class="column single">
+                    <button type="button" class="next-button" name="next-button" onClick="gotoImageQuestion()">Use this location</button>
+                </div>
+            </div>
+            <div id="image-question" style="display: none;">
+                <div class="row">
+                    <div class="column half">
+                        <p>Please add a photo of the damaged object</p>
+                        <input type="file" accept="image/*" name="image"/>
+                        <button type="button" class="next-button" name="next-button" onClick="gotoCategoryQuestion()">Next</button>
+                    </div>
+                </div>
+            </div>
+            <!--this question is generated in ./report.js-->
+            <div id="category-question" style="display: none;">
+            </div>
+            <!--this question is generated in ./report.js-->
+            <div id="primary-issue-question" style="display: none;">
+            </div>
+            <div id="description-question" style="display: none;">
+                <div class="row">
+                    <div class="column half question">
+                        <h1>Please provide a brief description of the issue.</h1>
+                        <p>If you chose from the provided options, there is no need to leave a long description. If you are reporting about a different issue, please specify the object (sign, building, parking lot, etc.) and the issue here.</p>
+                        <p>If you are reporting about a building, please leave details about the room with the reported issue.</p>
+                        <p id="chars-remaining-message">300 Characters Remaining</p>
+                    </div>
+                    <div class="column half">
+                        <textarea class="description-textbox" id="description-textbox" rows="20" maxlength="300" oninput="onTextChange()"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column single">
+                        <button type="button" class="next-button" name="next-button" onclick="setDescription()">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        
+        </form>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+                integrity= 
+                "sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+                crossorigin=""></script> 
+        <script language="javascript" type="text/javascript" src="./survey-tree.js"></script>
+        <script language="javascript" type="text/javascript" src="./report.js"></script>
+        <script language="javascript" type="text/javascript" src="../../page-defaults/footer.js"></script>
     </body>
 </html>
