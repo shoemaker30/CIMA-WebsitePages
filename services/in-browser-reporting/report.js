@@ -8,8 +8,9 @@ function updatePosition(){
       function success(pos) {
           var lat = pos.coords.latitude;
           var lon = pos.coords.longitude;
+          getLocationDetails(lat,lon); 
           centerMap(lat,lon);
-          moveMarker(lat,lon);
+          moveMarker(lat,lon, "You are here.");
           setCoords(lat,lon);
       }
       function error(err) {
@@ -21,9 +22,34 @@ function updatePosition(){
 function centerMap(latitude, longitude){
     map.setView([latitude, longitude], 15); 
 }
-function moveMarker(latitude, longitude){
+function moveMarker(latitude, longitude, popupMessage){
     marker = L.marker([latitude,longitude]).addTo(map);
-        
+    marker.bindPopup(popupMessage).openPopup();
+}
+async function getLocationDetails(latitude, longitude){
+    await fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+
+        latitude+'&longitude='+longitude+'&localityLanguage=en')
+            .then((response) => response.json())
+            .then((location) => {
+
+                console.log(location);
+
+                var zip = location.postcode;
+                var city = location.localityInfo.administrative[3].name;
+                var county = location.localityInfo.administrative[2].name;
+                var state = location.localityInfo.administrative[1].name;
+                
+                document.getElementById('location-details').innerHTML = `
+                    <p>City: <b>`+city+`</b></p>
+                    <p>Country: <b>`+county+`</b></p>
+                    <p>State: <b>`+state+`</b></p>
+                `;
+
+                surveyAnswers.zipCode = zip;
+                surveyAnswers.city = city;
+                surveyAnswers.county = county;
+                surveyAnswers.state = state;
+            });
 }
 
 //greys out and disables buttons so users cannot advance before answering current question
@@ -74,18 +100,20 @@ function setDescription(){
  */
 function gotoImageQuestion(){
     document.getElementById('map-question').style.display="none";
-    //disableNextButton();
+    disableNextButton();
     document.getElementById('image-question').style.display="inline";
+    document.getElementById('image-question').style.height="auto";
 }
 function gotoCategoryQuestion(){
     document.getElementById('image-question').style.display="none";
     generateCategoryQuestion();
     document.getElementById('category-question').style.display="inline";
+    document.getElementById('category-question').style.height="auto";
 }
 function gotoPrimaryIssueQuestion(category){
     document.getElementById('category-question').style.display="none";
     generatePrimaryIssueQuestion(category);
-    document.getElementById('primary-issue-question').style.display="inline";
+    document.getElementById('primary-issue-question').style.height = 'auto';
 }
 function gotoDescriptionQuestion(){
     document.getElementById('category-question').style.display="none";
@@ -143,7 +171,7 @@ function generatePrimaryIssueQuestion(category){
         <div class="row">
             <div class="column half question">
                 <h1>What is the issue regarding the `+category+`?</h1>
-                <p></p>
+                <p>Each report focuses on one of these issues. I multiple of these options are relevant, please submit your issues in multiple reports.</p>
             </div>
             <div class="column half">`
             +buttons+
@@ -158,10 +186,40 @@ function onTextChange(){
     console.log(remainingChars);
     document.getElementById('chars-remaining-message').innerHTML = remainingChars+" Characters Remaining";
 }
+function onFileInput(){
+    const fileInput = document.getElementById('file-input');
+    var imageFile = fileInput.files[0];
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        document.getElementById('submitted-photo').src = e.target.result;
+    }
+    reader.readAsDataURL(imageFile);
+    enableNextButton();
+}
 
 async function submitReport(){
+
+    document.getElementById('description-question').style.display = "none";
+    var url = 'http://localhost:3000/submit-report?latitude=' + surveyAnswers.latitude +
+        '&longitude=' + surveyAnswers.longitude +
+        '&primary_issue=' + surveyAnswers.primaryIssue +
+        '&description=' + surveyAnswers.description;
+
+    const options = {
+        method:'GET',
+        mode: 'no-cors'
+    };
+    fetch(url,options)
+        .then(response =>{
+             console.log(response);
+             window.location.replace('./report-submission.php');
+        });
+
     
 }
+
+
+
 
 disableNextButton();
 
@@ -186,14 +244,12 @@ var surveyAnswers = {
     description:null
 }
 
+
 const CHAR_LIMIT = 300;
 
 updatePosition();
 
 
-gotoImageQuestion();
-gotoCategoryQuestion();
-//gotoPrimaryIssueQuestion();
 
 
 

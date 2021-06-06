@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/d81ae76bde.js" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" href="../../page-defaults/navbar.css">
@@ -27,24 +27,36 @@
         <form>
             <div id="map-question">
                 <div class="row">
-                    <div class="column half">
-                        <p>Where did this occur?</p>
+                    <div class="column half question">
+                        <h1>Where did this occur?</h1>
+                        <p>It is greatly encouraged that reports are conducted at the location of the damage in order to ensure accuracy and data integrity.</p>
+                        <p><em>If no map loads, please ensure <a href="https://docs.buddypunch.com/en/articles/919258-how-to-enable-location-services-for-chrome-safari-edge-and-android-ios-devices-gps-setting" target="_blank" rel="noopener noreferrer">location data is enabled</a>.</em></p>
                         <p id="error-message">Location data is disabled. Please <a href="https://docs.buddypunch.com/en/articles/919258-how-to-enable-location-services-for-chrome-safari-edge-and-android-ios-devices-gps-setting" target="_blank" rel="noopener noreferrer">enable</a> and refresh the page to continue.</p>
-                        
+                        <div id="location-details">
+                            <p>City:</p>
+                            <p>County:</p>
+                            <p>State:</p>
+                        </div>
                     </div>
                     <div class="column half tall" id="map">
                     </div>
-                </div>
-                <div class="column single">
                     <button type="button" class="next-button" name="next-button" onClick="gotoImageQuestion()">Use this location</button>
                 </div>
             </div>
             <div id="image-question" style="display: none;">
                 <div class="row">
+                    <div class="column half question">
+                        <h1>Please provide a photo of the damaged object.</h1>
+                        <p>If you are reporting about issues that do not have an immediate frame of refernece, such as Water/Ice Accumulation or 
+                            ADA compliance, simply submit a photograph of the source of your concern.</p>
+                        <div id="camera-button">
+                            <input type="file" accept="image/*" name="image" id="file-input" onchange="onFileInput()"/>
+                            <i class="fas fa-camera"></i>
+                        </div></br>
+                        <button type="button" class="next-button" name="next-button" onClick="gotoCategoryQuestion()">Use this photo</button>
+                    </div>
                     <div class="column half">
-                        <p>Please add a photo of the damaged object</p>
-                        <input type="file" accept="image/*" name="image"/>
-                        <button type="button" class="next-button" name="next-button" onClick="gotoCategoryQuestion()">Next</button>
+                        <img id="submitted-photo"></img>
                     </div>
                 </div>
             </div>
@@ -52,7 +64,7 @@
             <div id="category-question" style="display: none;">
             </div>
             <!--this question is generated in ./report.js-->
-            <div id="primary-issue-question" style="display: none;">
+            <div id="primary-issue-question">
             </div>
             <div id="description-question" style="display: none;">
                 <div class="row">
@@ -63,12 +75,12 @@
                         <p id="chars-remaining-message">300 Characters Remaining</p>
                     </div>
                     <div class="column half">
-                        <textarea class="description-textbox" id="description-textbox" rows="20" maxlength="300" oninput="onTextChange()"></textarea>
+                        <textarea class="description-textbox" id="description-textbox" rows="20" maxlength="300" oninput="onTextChange()" placeholder="Place your description here..."></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="column single">
-                        <button type="button" class="next-button" name="next-button" onclick="setDescription()">Next</button>
+                        <button type="button" class="next-button" name="next-button" onclick="setDescription()">Submit Report</button>
                     </div>
                 </div>
             </div>

@@ -3,13 +3,13 @@
 
 document.write(
     '<div class="topnav" id="myTopnav">'
-+       '<a href="#" class="active">CIMA</a>'
++       '<a href="/cimapp/CIMA-WebsitePages/" class="active">CIMA</a>'
 +       '<div class="dropdown">'
 +           '<button class="dropbtn">Services '
 +               '<i class="fa fa-caret-down"></i>'
 +           '</button>'
 +           '<div class="dropdown-content">'
-+               '<a href="#">In-Browser Reporting</a>'
++               '<a href="/cimapp/CIMA-WebsitePages/services/in-browser-reporting">In-Browser Reporting</a>'
 +               '<a href="#">Mobile App</a>'
 +               '<a href="#">View Nearby Hazards</a>'
 +               '<a href="#">Cima for Municipalities</a>'
@@ -21,7 +21,7 @@ document.write(
 +               '<i class="fa fa-caret-down"></i>'
 +           '</button>'
 +           '<div class="dropdown-content">'
-+               '<a href="#">About Us</a>'
++               '<a href="/cimapp/CIMA-WebsitePages/info/about">About Us</a>'
 +               '<a href="#">FAQ</a>'
 +           '</div>'
 +       '</div> '
@@ -31,12 +31,12 @@ document.write(
 +           '</button>'
 +           '<div class="dropdown-content">'
 +               '<a href="#">Site Messaging</a>'
-+               '<a href="#">Contact Info</a>'
++               '<a href="/cimapp/CIMA-WebsitePages/contact">Contact Info</a>'
 +           '</div>'
 +       '</div> '
 +       '<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNavbar()">&#9776;</a>'
 +    '</div>'
-+    '<div id="myOverlay" class="nav-overlay"></div>'
+//+    '<div id="myOverlay" class="nav-overlay"></div>'
 );
 
 

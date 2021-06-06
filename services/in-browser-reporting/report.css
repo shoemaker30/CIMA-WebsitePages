@@ -17,6 +17,7 @@
     
 }
 
+
 .disabled{
     background-color: darkgrey;
     color:lightgrey;
@@ -69,12 +70,12 @@
 
 .issue-option{
     width: 95%;
-    height: 10%;
+    height: 9%;
     color:white;
     margin-left: 2.5%;
     margin-right: 2.5%;
     margin-top: 1%;
-    background-color: darkslateblue;
+    background-color: #04AA6D;
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
@@ -86,6 +87,47 @@
 
 
 .description-textbox{
-    width:90%;
+    height:auto;
     resize:none;
+    width: 96%;
+}
+
+
+#category-question{
+    height:0;
+    transition: height 0.4s, transform 0.4s;
+}
+#primary-issue-question{
+    height:0%;
+    transition: height 0.4s, transform 0.4s;
+}
+#image-question{
+    height:0%;
+    transition: height 0.4s, transform 0.4s;
+}
+
+#location-details{
+    text-align: left;
+    padding: 3%;
+}
+#location-details p{
+    font-size: 15px;
+}
+
+#camera-button{
+    background-color: lightgrey;
+    margin: 2%;
+    padding: 15px;
+    border-radius: 15px;
+    display: 'block';
+}
+
+#submitted-photo{
+    height: 50%;
+    width: 100%;
+}
+#chars-remaining-message{
+    color: green;
+    font-weight: bold;
+    
 }
