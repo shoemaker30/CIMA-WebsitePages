@@ -1,11 +1,79 @@
-.about{
-    text-align: left;
-    margin: 1%;
-}
-.about h1{
-    font-size: 30px;
+body{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
 }
 
-.underline{
-    border-bottom: 1px solid;
+
+h1,h2,h3,h4,p{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    color:#02353C;
+}
+.background{
+    background-color: #7fcec5;
+    background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
+    width: 100%;
+    min-height: 90%;
+    float: left;
+}
+
+.container .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container .column{
+    float:left;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+
+}
+
+.container{
+    width: 70%;
+    margin-left: 15%;
+    
+}
+.container .person{
+    width: 30%;
+    margin-left: 2.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-radius: 20px;
+
+}
+   
+.container .row-img img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.container .row-info h1{
+    font-size: 35px;
+}
+
+
+@media screen and (max-width:1024px){
+    .container {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}
+
+@media screen and (max-width:800px){
+    .container {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .container .column{
+        margin-top: 4%;
+        margin-left:0;
+        width: 100%;
+    }
 }

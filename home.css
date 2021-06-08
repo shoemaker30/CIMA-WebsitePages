@@ -40,7 +40,7 @@ body{
     .basic .textbox{
         margin-top: 0px;
     }
-    @media screen and (max-width:600px) {
+    @media screen and (max-width:1020px) {
         .basic p {
             margin-left: 2%;
             margin-right: 2%;
@@ -53,8 +53,9 @@ body{
     justify-content: center;
     text-align: center;
     height: 600px;
+    background-color: #7fcec5;
+    background-image: linear-gradient(315deg, #7fcec5 0%, #14557b 74%);
     
-    background-color: #f8f8ff;
 }
     .basic-img:after{
         content: "";
@@ -68,7 +69,7 @@ body{
         float: left;
     }
     .basic-img h1 {
-        color: #000052;
+        color: white;
         text-align: left;
         font-family: 'Epilogue', sans-serif;
         font-size: 65px;
@@ -77,6 +78,7 @@ body{
         margin-top: 5px;
         text-align: left;
         font-size: 20px;
+        color: white;
     }
     .basic-img .phone-image{
         max-width: 35%;
@@ -102,7 +104,8 @@ body{
         border-radius: 10px;
         font-family: 'Epilogue', sans-serif;
         font-size: 20px;
-        font-weight: bolder;background-color: #000052;
+        font-weight: bolder;
+        background-color: #000052;
     }
     .basic-img button:hover{
         filter: brightness(1.1);
@@ -123,26 +126,22 @@ body{
     #apple{
         background-color: #C0C0C0;
     }
-    @media screen and (max-width:600px) {
-        
-        
+    @media screen and (max-width:1020px) {
+    
         .basic-img img {
             height: 0;
-        }
-        .basic-img{
-            height: auto;
         }
         .basic-img::before{
             content: "";
             background-image: url('./media/hand-holding-phone.png');
             background-size: cover;
             position: absolute;
-            top: 0px;
+            top: 50px;
             right: 0px;
             bottom: 0px;
             left: 0px;
-            opacity: 0.4;
-
+            opacity: 0.2;
+            height: 600px;
         }
         .basic-img .textbox{
             width: 90%;
@@ -162,44 +161,124 @@ body{
     display: table;
     clear: both;
 }
-    .steps .left{
-        margin-left: 10%;
-        width: 25%;
+    .steps{
+        float: left;
+        width: 100%;
+        background-color: #3bb78f;
+        background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
     }
-    .steps .right{
-        margin-left: 0%;
-        width: 55%;
+    .steps .container{
+        width: 85%;
+        margin-left: 8%;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .steps .header{
+        margin-top: 50px;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+        .steps .header h1{
+            color: white;
+            font-size: 70px;
+            font-family: 'Epilogue', sans-serif;
+        }
+        .steps .header p{
+            color: white;
+            font-size: 20px;
+        }
+    .steps .narrow{
+        width: 35%;
+    }
+    .steps .wide{
+        width: 65%;
     }
 
     .steps .card{
-        height: 300px;
-        margin-top: 25px;
+        height: 250px;
         float: left;
-        background-color: blue;
+        background-color: white;
         text-align: left;
         font-family: 'Epilogue', sans-serif;
-        filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.8));
+
     }
         .steps .card .textbox{
-            color: white;
             margin-left: 5%;
             margin-top: 35px;
+            margin-right: 5%;
+            color:#02353C;
         }
         .steps .card h1{
             font-size: 22px;
             font-family: cursive;
+            color:green;
         }
         .steps .card h2{
             font-size: 28px;
+            color:#02353C;
         }
         .steps .card p{
             font-size: 18px;
+            color:#02353C;
         }
-
         #map-card{
             background-image: url('./media/open-street-map.png');
             background-position: center;
             background-size: cover;
+        }
+        #photo-card{
+            background-image: url('./media/pothole.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .steps .alt{
+            background-color: #f9f9f9;
+            margin-left: 12%;
+        }
+
+        @media screen and (max-width:800px) {
+            .steps .container{
+                width: 100%;
+                margin-bottom: 1px;
+                margin-left: 0;
+                
+            }
+            .steps .header{
+                width: 80%;
+                margin-left: 10%;
+            }
+                .steps .header h1{
+                    font-size: 40px;
+                    font-family: 'Epilogue', sans-serif;
+                }
+                .steps .header p{
+                    font-size: 16px;
+                }
+            .steps .narrow{
+                width: 35%;
+            }
+            .steps .wide{
+                width: 65%;
+            }
+            .steps .card .textbox{
+                margin-left: 3%;
+                margin-top: 15px;
+                margin-right: 5%;
+                color:#02353C;
+            }
+            .steps .card h1{
+                font-size: 20px;
+                font-family: cursive;
+                color:green;
+            }
+            .steps .card h2{
+                font-size: 25px;
+                color:#02353C;
+            }
+            .steps .card p{
+                font-size: 15px;
+                color:#02353C;
+            }
         }
         
 
@@ -233,39 +312,3 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.parallax-river-walk{
-    background-image: url("./media/greenville-river-walk.jpg");
-    height: 50%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
-.parallax-pothole{
-    background-image: url("./media/pothole.jpg");
-    height: 40%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
