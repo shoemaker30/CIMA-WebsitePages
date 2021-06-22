@@ -2,42 +2,34 @@
 //https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_responsive_navbar_dropdown
 
 document.write(
-    '<div class="topnav" id="myTopnav">'
-+       '<a href="/CIMA-WebsitePages/" class="active">CIMA</a>'
-+       '<div class="dropdown">'
-+           '<button class="dropbtn">Services '
-+               '<i class="fa fa-caret-down"></i>'
-+           '</button>'
-+           '<div class="dropdown-content">'
-+               '<a href="/CIMA-WebsitePages/services/in-browser-reporting">In-Browser Reporting</a>'
-+               '<a href="#">Mobile App</a>'
-+               '<a href="#">View Nearby Hazards</a>'
-+               '<a href="#">Cima for Municipalities</a>'
-+               '<a href="#">API and Integrations</a>'
-+           '</div>'
-+       '</div> '
-+       '<div class="dropdown">'
-+           '<button class="dropbtn">Info '
-+               '<i class="fa fa-caret-down"></i>'
-+           '</button>'
-+           '<div class="dropdown-content">'
-+               '<a href="/CIMA-WebsitePages/info/about">About Us</a>'
-+               '<a href="#">FAQ</a>'
-+           '</div>'
-+       '</div> '
-+       '<div class="dropdown">'
-+           '<button class="dropbtn">Contact '
-+               '<i class="fa fa-caret-down"></i>'
-+           '</button>'
-+           '<div class="dropdown-content">'
-+               '<a href="#">Site Messaging</a>'
-+               '<a href="/CIMA-WebsitePages/contact">Meet the Team</a>'
-+           '</div>'
-+       '</div> '
-+       '<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNavbar()">&#9776;</a>'
-+    '</div>'
-//+    '<div id="myOverlay" class="nav-overlay"></div>'
-+    '<div class="topnav-spacer"></div>'
+    `<div class="topnav" id="myTopnav">
+       <a href="/" class="active">CIMA</a>
+       <div class="dropdown">
+           <button class="dropbtn">Services 
+               <i class="fa fa-caret-down"></i>
+           </button>
+           <div class="dropdown-content">
+                <a href="/services/in-browser-reporting">In-Browser Reporting</a>
+                <a href="/services/mobile-app">Mobile App</a>
+                <a href="/services/nearby-hazards">View Nearby Hazards</a>
+                <a href="/services/municipalities">Cima for Municipalities</a>
+                <a href="/services/api">API and Integrations</a>
+            </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn">Info 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="/info/about">About Us</a>
+                <a href="/info/deployments">Active Deployments</a>
+                <a href="/info/faq">FAQ</a>
+            </div>
+        </div> 
+        <a href="/contact">Contact Us</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="toggleNavbar()">&#9776;</a>
+    </div>
+    <div class="topnav-spacer"></div>`
 );
 
 
@@ -48,12 +40,5 @@ function toggleNavbar() {
     } else {
         x.className = "topnav";
     }
-    /*
-    x = document.getElementById("myOverlay");
-    if (x.className === "nav-overlay") {
-        x.className += " active";
-    } else {
-        x.className = "nav-overlay";
-    }*/
 }
 

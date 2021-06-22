@@ -231,6 +231,11 @@ body{
             background-position: center;
             background-size: cover;
         }
+        #description-card{
+            background-image: url('./media/description.jpg');
+            background-position: center;
+            background-size: cover;
+        }
         .steps .alt{
             background-color: #f9f9f9;
             margin-left: 12%;
