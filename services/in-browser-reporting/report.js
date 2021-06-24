@@ -128,7 +128,7 @@ function generateCategoryQuestion(){
         <div class="row">
             <div class="column half question">
                 <h1>What are you reporting about today?</h1>
-                <p>Let us know what your reporting about, and we will use that and the picture to create your report</p>
+                <p>Let us know what your reporting about. This will help categorize your report and to create a timeline of the reports.</p>
             </div>
             <div class="column fourth">
                 
@@ -141,7 +141,7 @@ function generateCategoryQuestion(){
             <div class="column fourth">
                     <button class="category-option" type="button" onClick="setCategory('Building')"><i class="fas fa-city"></i></br>Building</button>
                 </br>
-                    <button class="category-option" type="button" onClick="setCategory('Pedestrian Bridge')"></br>Pedestrian Bridge</button>
+                    <button class="category-option" type="button" onClick="setCategory('Pedestrian Bridge')"><i class="fas fa-walking"></i></br>Pedestrian Bridge</button>
                 </br>
                     <button class="category-option" type="button" onClick="setCategory('Roadway')"><i class="fas fa-road"></i></br>Roadway</button>
             </div>

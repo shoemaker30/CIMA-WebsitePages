@@ -133,7 +133,7 @@ body{
         }
         .basic-img::before{
             content: "";
-            background-image: url('./media/hand-holding-phone.png');
+            background-image: url('/media/hand-holding-phone.png');
             background-size: cover;
             position: absolute;
             top: 50px;
@@ -222,17 +222,22 @@ body{
             color:#02353C;
         }
         #map-card{
-            background-image: url('./media/open-street-map.png');
+            background-image: url('/media/open-street-map.png');
             background-position: center;
             background-size: cover;
         }
         #photo-card{
-            background-image: url('./media/pothole.jpg');
+            background-image: url('/media/pothole.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        #answer-card{
+            background-image: url('/media/category-question.png');
             background-position: center;
             background-size: cover;
         }
         #description-card{
-            background-image: url('./media/description.jpg');
+            background-image: url('/media/description.jpg');
             background-position: center;
             background-size: cover;
         }

@@ -1,29 +1,29 @@
 document.write(
-    '<div class="footer">'
-    +'<div class="row darkgrey"></div>'
-    + '<div class="row darkgrey">' 
-    +    '<div class="column fourth ">' 
-    +       '<h2>Webpages:</h2>' 
-    +        '<p><a href="/cimapp/CIMA-WebsitePages/info/cities">Participating Cities</a></p>' 
-    +        '<p><a href="./mobile">Mobile Reporting App</a></p>' 
-    +        '<p><a href="./report/view-nearby-reports.html">See Nearby Hazards</a></p>' 
-    +        '<p><a href="./report/create.html">Create a Report</a></p>' 
-    +        '<p><a href="./api">API and Integrations</a></p>' 
-    +    '</div>' 
-    +    '<div class="column fourth ">' 
-    +        '<h2>-</h2>' 
-    +        '<p><a href="info/faq.html">FAQ</a></p>'
-    +        '<p><a href="../contact">Contact Us</a></p>'
-    +        '<p><a href="../info/about">About Cima</a></p>'
-    +        '<p><a href="./webapp">Cima for Cities</a></p>'
-    +    '</div>'
-    +    '<div class="column half  desktop-only">'
-    +        '<h2>Contact:</h2>'
-    +        '<h3>Eric J. Shoemaker</h3>'
-    +        '<h3>Undergraduate Research Assistant at Marshall University</h3>'
-    +        '<h4>shoemaker30@live.marshall.edu</h4>'
-   
-    +    '</div>'
-    +'</div>'
-    + '</div>'
+    `<div class="footer">
+    <div class="row darkgrey"></div>
+    <div class="row darkgrey">
+        <div class="column fourth">
+            <h2>Webpages:</h2>
+            <p><a href="/">Home</a></p>
+            <p><a href="/services/in-browser-reporting">In-Browser Reporting</a></p>
+            <p><a href="/services/mobile-app">Mobile Reporting App</a></p>
+            <p><a href="/services/nearby-hazards">See Nearby Hazards</a></p>
+            <p><a href="/services/api">API and Integrations</a></p>
+        </div>
+        <div class="column fourth">
+            <h2>-</h2>
+            <p><a href="/info/about">About Us</a></p>
+            <p><a href="/info/faq">FAQ</a></p>
+            <p><a href="/contact">Contact Us</a></p>
+            <p><a href="/services/municipalities">Cima for Municipalities</a></p>
+            <p><a href="/info/participants">Participating Municipalities</a></p>
+        </div>
+        <div class="column half">
+            <h2>Questions or Comments?</h2>
+            <h4>Email us at: </br>cimamessaging@outlook.com</h4>
+            <h2>Bug Report?</h2>
+            <h4>Email the developer: </br>shoemaker30@live.marshall.edu</h4>
+        </div>
+    </div>
+    </div>`
 );

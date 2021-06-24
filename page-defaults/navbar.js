@@ -22,8 +22,8 @@ document.write(
             </button>
             <div class="dropdown-content">
                 <a href="/info/about">About Us</a>
-                <a href="/info/deployments">Active Deployments</a>
                 <a href="/info/faq">FAQ</a>
+                <a href="/info/studies">Studies</a>
             </div>
         </div> 
         <a href="/contact">Contact Us</a>

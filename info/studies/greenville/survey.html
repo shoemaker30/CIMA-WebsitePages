@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Greenville Survey</title>
+        <link rel="icon" href="/page-defaults/favicon.ico">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/page-defaults/navbar.css">
+        <link rel="stylesheet" href="/page-defaults/footer.css">
+        <link rel="stylesheet" href="./survey.css">
+        <script language="javascript" type="text/javascript" src="./consent-form.js"></script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <script language="javascript" type="text/javascript" src="/page-defaults/navbar.js"></script>
+
+        <div class="parallax-river-walk">
+            <div id="consent-form" class="consent-form">
+                <h3>Confidential Survey Consent</h3>
+                <p>
+                    TODO once IRB approved
+                </p>
+                <button type="button" id="accept-button" onclick="javascript:acceptConsentForm();">I Accept</button>
+            </div>
+
+            <form id="survey" method="post" action="survey-submit.php" style="display: none;">
+
+                <h1>CIMA Interest Survey</h1>
+                <h2>Swamp Rabbit Trail, Greenville, SC</h2>
+                <p>All questions are optional. Please read the <a href="/info/studies/greenville">information about this study</a> before completing the survey.</p>
+                <div class="question">
+                    <label for="">Please leave an email. (<em>Emails are only collected to contact a prize winner and discarded afterwards.)</em></label>
+                    <div class="options">
+                        <input type="email" name="Email" placeholder="example@gmail.com" maxlength="50"/>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="">If CIMA were deployed in your area, how likely would you be to use it?</label>
+                    <div class="options">
+                        <input type="radio" name="Question3" value="Mobile App">Very Likely</input></br>
+                        <input type="radio" name="Question3" value="Mobile App">Somewhat Likely</input></br>
+                        <input type="radio" name="Question3" value="Mobile App">Not Likely</input></br>
+                        <input type="radio" name="Question3" value="Website">Not at all</input>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="">Would you prefer to use the website or a mobile app? (The user interface remains the same)</label>
+                    <div class="options">
+                        <input type="radio" name="Question2" value="Mobile App">Mobile App</input></br>
+                        <input type="radio" name="Question2" value="Website">Website</input>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="">Please explain your reasoning for your answer above.</label></br>
+                    <textarea name="Question3" rows="10" maxlength="300" placeholder="Your response here..."></textarea>
+                </div>
+                <div class="question">
+                    <label for="">If you completed a report, about how long did it take?</label>
+                    <div class="options">
+                        <input type="radio" name="Question4" value="Less than 30 seconds">Less than 30 seconds</input></br>
+                        <input type="radio" name="Question4" value="Less than 1 minute">Less than 1 minute</input></br>
+                        <input type="radio" name="Question4" value="More than 1 minute">More than 1 minute</input>
+                    </div>
+                </div>
+                <div class="question">
+                    <label for="">Did you have any trouble with creating a report, or do you have any suggestions for improvement?</label></br>
+                    <textarea name="Question5" rows="10" maxlength="300" placeholder="Your response here..."></textarea>
+                </div>
+
+                <p>By submitting this form, you agree to the terms of our <a href="javascript:showConsentForm()">confidential survey consent.</a> If you are unable to view the form, please ensure that JavaScript is enabled in your browser.</p>
+                <button type="Submit" value="Submit">Submit</button>
+            </form>
+
+            
+        </div>
+
+        <!--footer-->
+        <script language="javascript" type="text/javascript" src="/page-defaults/footer.js"></script>
+
+    </body>
+    
+</html>
